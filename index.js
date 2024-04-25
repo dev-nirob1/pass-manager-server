@@ -7,7 +7,11 @@ const cookieParser = require('cookie-parser')
 const app = express()
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: [
+    'http://localhost:5173',
+    'https://simple-firebase-f50be.web.app',
+    'https://simple-firebase-f50be.firebaseapp.com'
+],
   credentials: true,
 }))
 app.use(express.json())
